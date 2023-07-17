@@ -1,0 +1,629 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{92A2148E-77C2-4A5D-9AB1-53A8E0E0448A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication2</RootNamespace>
+    <AssemblyName>WebApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome6.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=150287d219411f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome6.Fonts.2.5.1\lib\net472\FontAwesome6.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome6.Fonts.Net, Version=2.5.1.0, Culture=neutral, PublicKeyToken=150287d219411f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome6.Fonts.2.5.1\lib\net472\FontAwesome6.Fonts.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome6.Shared.Net, Version=2.5.1.0, Culture=neutral, PublicKeyToken=150287d219411f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome6.Fonts.2.5.1\lib\net472\FontAwesome6.Shared.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Image\abstract-blur-hospital-clinic-interior.jpg" />
+    <Content Include="Content\Image\AP %28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\ARUNACHAL%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\ASSAM%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\background.jpg" />
+    <Content Include="Content\Image\bg.jpg" />
+    <Content Include="Content\Image\BIHAR%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\body pains %281%29.jpg" />
+    <Content Include="Content\Image\brain exercise %281%29.jpg" />
+    <Content Include="Content\Image\brain icon %281%29.jpg" />
+    <Content Include="Content\Image\brain img %281%29.jpg" />
+    <Content Include="Content\Image\brain infection %281%29.jpg" />
+    <Content Include="Content\Image\CHHATTISGARH%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\cold %281%29.jpg" />
+    <Content Include="Content\Image\cough %281%29.jpg" />
+    <Content Include="Content\Image\doc bg.jpg" />
+    <Content Include="Content\Image\doctor%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\doctor.png" />
+    <Content Include="Content\Image\fever %281%29.jpg" />
+    <Content Include="Content\Image\first.jpg" />
+    <Content Include="Content\Image\GENERAL DIESEASES.jpg" />
+    <Content Include="Content\Image\GOA%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\GUIDELINES.jpg" />
+    <Content Include="Content\Image\GUJARAT%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\HARYANA%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\headache %281%29.jpg" />
+    <Content Include="Content\Image\Healthcare-Backround.jpg" />
+    <Content Include="Content\Image\heart death %281%29.jpg" />
+    <Content Include="Content\Image\heart icon %281%29.jpg" />
+    <Content Include="Content\Image\HIMACHAL%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\hospital admin.jpg" />
+    <Content Include="Content\Image\hospital bg.jpg" />
+    <Content Include="Content\Image\hospital bg1.jpg" />
+    <Content Include="Content\Image\hospital.jpg" />
+    <Content Include="Content\Image\human heart %281%29.jpg" />
+    <Content Include="Content\Image\human kidney %281%29.jpg" />
+    <Content Include="Content\Image\human liver %281%29.jpg" />
+    <Content Include="Content\Image\human lungs %281%29.jpg" />
+    <Content Include="Content\Image\INFORMATION %285%29.jpg" />
+    <Content Include="Content\Image\INFORMATION1.jpg" />
+    <Content Include="Content\Image\JAMMU%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\JHARKAND%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\KARNATAKA%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\KERALA%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\kidney infection %281%29.jpg" />
+    <Content Include="Content\Image\kidneys icon %281%29.jpg" />
+    <Content Include="Content\Image\liver icon %281%29.jpg" />
+    <Content Include="Content\Image\liver infection %281%29.jpg" />
+    <Content Include="Content\Image\logo.jpg" />
+    <Content Include="Content\Image\logo.png" />
+    <Content Include="Content\Image\lung infecion %281%29.jpg" />
+    <Content Include="Content\Image\lungs icon %281%29.jpg" />
+    <Content Include="Content\Image\MAHARASHTRA%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\MANIPUR%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\meditation %28brain%29 %281%29.jpg" />
+    <Content Include="Content\Image\MEGHALAYA%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\MIZORAM%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\MP%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\NAGALAND%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\ODISHA%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\organ donor.jpg" />
+    <Content Include="Content\Image\Organ-Donation-Facts-OG.jpg" />
+    <Content Include="Content\Image\patient%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\pt.png" />
+    <Content Include="Content\Image\PUNJAB%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\RAJASTHAN%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\second.jpg" />
+    <Content Include="Content\Image\SIKKIM%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\skipping %281%29.jpg" />
+    <Content Include="Content\Image\SWASA %283%29.jpg" />
+    <Content Include="Content\Image\TAMILNADU%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\TELANAGANA %28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\thrid.jpg" />
+    <Content Include="Content\Image\TRIPURA%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\UP%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\UTTARPORADESH%28300 × 300px%29.jpg" />
+    <Content Include="Content\Image\WEST BENGAL%28300 × 300px%29.jpg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.8.0.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.0.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Modelclass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Default\login.cshtml" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Views\Default\Signup.cshtml" />
+    <Content Include="Views\Default\Home.cshtml" />
+    <Content Include="Views\Default\UserLogin.cshtml" />
+    <Content Include="Views\Default\UserSignup.cshtml" />
+    <Content Include="Views\Default\first.cshtml" />
+    <Content Include="Views\Default\donor.cshtml" />
+    <Content Include="Views\Default\secondone.cshtml" />
+    <Content Include="Views\Default\adminpage.cshtml" />
+    <Content Include="Views\Default\Forgotpassword.cshtml" />
+    <Content Include="Views\Default\Statelocation.cshtml" />
+    <Content Include="Views\Default\Admincard.cshtml" />
+    <Content Include="Views\Default\Statelocation1.cshtml" />
+    <Content Include="Views\Default\Statelocation2.cshtml" />
+    <Content Include="Views\Default\Statelocation3.cshtml" />
+    <Content Include="Views\Default\Statelocation4.cshtml" />
+    <Content Include="Views\Default\Andhrapradesh.cshtml" />
+    <Content Include="Views\Default\Arunachalpradesh.cshtml" />
+    <Content Include="Views\Default\Assam.cshtml" />
+    <Content Include="Views\Default\Bihar.cshtml" />
+    <Content Include="Views\Default\Chhattisgarh.cshtml" />
+    <Content Include="Views\Default\Goa.cshtml" />
+    <Content Include="Views\Default\Gujarat.cshtml" />
+    <Content Include="Views\Default\Haryana.cshtml" />
+    <Content Include="Views\Default\Himachalpradesh.cshtml" />
+    <Content Include="Views\Default\Jammu.cshtml" />
+    <Content Include="Views\Default\Jharkhand.cshtml" />
+    <Content Include="Views\Default\Karnataka.cshtml" />
+    <Content Include="Views\Default\Kerala.cshtml" />
+    <Content Include="Views\Default\Madhyapradesh.cshtml" />
+    <Content Include="Views\Default\Manipur.cshtml" />
+    <Content Include="Views\Default\Meghalaya.cshtml" />
+    <Content Include="Views\Default\Maharashtra.cshtml" />
+    <Content Include="Views\Default\Mizoram.cshtml" />
+    <Content Include="Views\Default\Nagaland.cshtml" />
+    <Content Include="Views\Default\Odsiha.cshtml" />
+    <Content Include="Views\Default\Punjab.cshtml" />
+    <Content Include="Views\Default\Rajasthan.cshtml" />
+    <Content Include="Views\Default\Sikkim.cshtml" />
+    <Content Include="Views\Default\Tamilnadu.cshtml" />
+    <Content Include="Views\Default\Telangana.cshtml" />
+    <Content Include="Views\Default\Tripua.cshtml" />
+    <Content Include="Views\Default\Uttarpradesh.cshtml" />
+    <Content Include="Views\Default\Uttarakhand.cshtml" />
+    <Content Include="Views\Default\Westbengal.cshtml" />
+    <Content Include="Views\Default\Andhrapradesh1.cshtml" />
+    <Content Include="Views\Default\Arunachalpradesh1.cshtml" />
+    <Content Include="Views\Default\Assam1.cshtml" />
+    <Content Include="Views\Default\Bihar1.cshtml" />
+    <Content Include="Views\Default\Chhattisgarh1.cshtml" />
+    <Content Include="Views\Default\Goa1.cshtml" />
+    <Content Include="Views\Default\Gujarat1.cshtml" />
+    <Content Include="Views\Default\Haryana1.cshtml" />
+    <Content Include="Views\Default\Himachalpradesh1.cshtml" />
+    <Content Include="Views\Default\Jammu1.cshtml" />
+    <Content Include="Views\Default\Jharkhand1.cshtml" />
+    <Content Include="Views\Default\Karnataka1.cshtml" />
+    <Content Include="Views\Default\Kerala1.cshtml" />
+    <Content Include="Views\Default\Madhyapradesh1.cshtml" />
+    <Content Include="Views\Default\Manipur1.cshtml" />
+    <Content Include="Views\Default\Maharashtra1.cshtml" />
+    <Content Include="Views\Default\Meghalaya1.cshtml" />
+    <Content Include="Views\Default\Mizoram1.cshtml" />
+    <Content Include="Views\Default\Nagaland1.cshtml" />
+    <Content Include="Views\Default\Odsiha1.cshtml" />
+    <Content Include="Views\Default\Punjab1.cshtml" />
+    <Content Include="Views\Default\Rajasthan1.cshtml" />
+    <Content Include="Views\Default\Sikkim1.cshtml" />
+    <Content Include="Views\Default\Tamilnadu1.cshtml" />
+    <Content Include="Views\Default\Telangana1.cshtml" />
+    <Content Include="Views\Default\Tripua1.cshtml" />
+    <Content Include="Views\Default\Uttarpradesh1.cshtml" />
+    <Content Include="Views\Default\Uttarakhand1.cshtml" />
+    <Content Include="Views\Default\Westbengal1.cshtml" />
+    <Content Include="Views\Default\Andhrapradesh2.cshtml" />
+    <Content Include="Views\Default\Arunachalpradesh2.cshtml" />
+    <Content Include="Views\Default\Assam2.cshtml" />
+    <Content Include="Views\Default\Bihar2.cshtml" />
+    <Content Include="Views\Default\Chhattisgarh2.cshtml" />
+    <Content Include="Views\Default\Goa2.cshtml" />
+    <Content Include="Views\Default\Gujarat2.cshtml" />
+    <Content Include="Views\Default\Haryana2.cshtml" />
+    <Content Include="Views\Default\Himachalpradesh2.cshtml" />
+    <Content Include="Views\Default\Jammu2.cshtml" />
+    <Content Include="Views\Default\Jharkhand2.cshtml" />
+    <Content Include="Views\Default\Karnataka2.cshtml" />
+    <Content Include="Views\Default\Kerala2.cshtml" />
+    <Content Include="Views\Default\Maharashtra2.cshtml" />
+    <Content Include="Views\Default\Madhyapradesh2.cshtml" />
+    <Content Include="Views\Default\Manipur2.cshtml" />
+    <Content Include="Views\Default\Meghalaya2.cshtml" />
+    <Content Include="Views\Default\Mizoram2.cshtml" />
+    <Content Include="Views\Default\Nagaland2.cshtml" />
+    <Content Include="Views\Default\Odsiha2.cshtml" />
+    <Content Include="Views\Default\Punjab2.cshtml" />
+    <Content Include="Views\Default\Rajasthan2.cshtml" />
+    <Content Include="Views\Default\Sikkim2.cshtml" />
+    <Content Include="Views\Default\Tamilnadu2.cshtml" />
+    <Content Include="Views\Default\Telangana2.cshtml" />
+    <Content Include="Views\Default\Tripua2.cshtml" />
+    <Content Include="Views\Default\Uttarpradesh2.cshtml" />
+    <Content Include="Views\Default\Uttarakhand2.cshtml" />
+    <Content Include="Views\Default\Westbengal2.cshtml" />
+    <Content Include="Views\Default\Andhrapradesh3.cshtml" />
+    <Content Include="Views\Default\Arunachalpradesh3.cshtml" />
+    <Content Include="Views\Default\Assam3.cshtml" />
+    <Content Include="Views\Default\Bihar3.cshtml" />
+    <Content Include="Views\Default\Chhattisgarh3.cshtml" />
+    <Content Include="Views\Default\Goa3.cshtml" />
+    <Content Include="Views\Default\Gujarat3.cshtml" />
+    <Content Include="Views\Default\Haryana3.cshtml" />
+    <Content Include="Views\Default\Himachalpradesh3.cshtml" />
+    <Content Include="Views\Default\Jammu3.cshtml" />
+    <Content Include="Views\Default\Jharkhand3.cshtml" />
+    <Content Include="Views\Default\Karnataka3.cshtml" />
+    <Content Include="Views\Default\Kerala3.cshtml" />
+    <Content Include="Views\Default\Madhyapradesh3.cshtml" />
+    <Content Include="Views\Default\Maharashtra3.cshtml" />
+    <Content Include="Views\Default\Manipur3.cshtml" />
+    <Content Include="Views\Default\Meghalaya3.cshtml" />
+    <Content Include="Views\Default\Mizoram3.cshtml" />
+    <Content Include="Views\Default\Nagaland3.cshtml" />
+    <Content Include="Views\Default\Odsiha3.cshtml" />
+    <Content Include="Views\Default\Punjab3.cshtml" />
+    <Content Include="Views\Default\Rajasthan3.cshtml" />
+    <Content Include="Views\Default\Sikkim3.cshtml" />
+    <Content Include="Views\Default\Tamilnadu3.cshtml" />
+    <Content Include="Views\Default\Telangana3.cshtml" />
+    <Content Include="Views\Default\Tripua3.cshtml" />
+    <Content Include="Views\Default\Uttarakhand3.cshtml" />
+    <Content Include="Views\Default\Westbengal3.cshtml" />
+    <Content Include="Views\Default\Andhrapradesh4.cshtml" />
+    <Content Include="Views\Default\Arunachalpradesh4.cshtml" />
+    <Content Include="Views\Default\Assam4.cshtml" />
+    <Content Include="Views\Default\Bihar4.cshtml" />
+    <Content Include="Views\Default\Chhattisgarh4.cshtml" />
+    <Content Include="Views\Default\Goa4.cshtml" />
+    <Content Include="Views\Default\Gujarat4.cshtml" />
+    <Content Include="Views\Default\Haryana4.cshtml" />
+    <Content Include="Views\Default\Himachalpradesh4.cshtml" />
+    <Content Include="Views\Default\Jammu4.cshtml" />
+    <Content Include="Views\Default\Jharkhand4.cshtml" />
+    <Content Include="Views\Default\Karnataka4.cshtml" />
+    <Content Include="Views\Default\Kerala4.cshtml" />
+    <Content Include="Views\Default\Maharashtra4.cshtml" />
+    <Content Include="Views\Default\Madhyapradesh4.cshtml" />
+    <Content Include="Views\Default\Manipur4.cshtml" />
+    <Content Include="Views\Default\Meghalaya4.cshtml" />
+    <Content Include="Views\Default\Mizoram4.cshtml" />
+    <Content Include="Views\Default\Nagaland4.cshtml" />
+    <Content Include="Views\Default\Odsiha4.cshtml" />
+    <Content Include="Views\Default\Punjab4.cshtml" />
+    <Content Include="Views\Default\Rajasthan4.cshtml" />
+    <Content Include="Views\Default\Sikkim4.cshtml" />
+    <Content Include="Views\Default\Tamilnadu4.cshtml" />
+    <Content Include="Views\Default\Telangana4.cshtml" />
+    <Content Include="Views\Default\Tripua4.cshtml" />
+    <Content Include="Views\Default\Uttarpradesh4.cshtml" />
+    <Content Include="Views\Default\Uttarakhand4.cshtml" />
+    <Content Include="Views\Default\Westbengal4.cshtml" />
+    <Content Include="Views\Default\Uttarpradesh3.cshtml" />
+    <Content Include="Views\Default\Statepage.cshtml" />
+    <Content Include="Views\Default\Userandhrapradesh.cshtml" />
+    <Content Include="Views\Default\Guidelines.cshtml" />
+    <Content Include="Views\Default\Userandhrapradesh1.cshtml" />
+    <Content Include="Views\Default\Userandhrapradesh2.cshtml" />
+    <Content Include="Views\Default\Userandhrapradesh3.cshtml" />
+    <Content Include="Views\Default\Userandhrapradesh4.cshtml" />
+    <Content Include="Views\Default\Userarunachalpradesh.cshtml" />
+    <Content Include="Views\Default\Userarunachalpradesh1.cshtml" />
+    <Content Include="Views\Default\Userarunachalpradesh2.cshtml" />
+    <Content Include="Views\Default\Userarunachalpradesh3.cshtml" />
+    <Content Include="Views\Default\Userarunachalpradesh4.cshtml" />
+    <Content Include="Views\Default\UserAssam.cshtml" />
+    <Content Include="Views\Default\UserAssam1.cshtml" />
+    <Content Include="Views\Default\UserAssam2.cshtml" />
+    <Content Include="Views\Default\UserAssam3.cshtml" />
+    <Content Include="Views\Default\UserAssam4.cshtml" />
+    <Content Include="Views\Default\UserBihar.cshtml" />
+    <Content Include="Views\Default\UserBihar1.cshtml" />
+    <Content Include="Views\Default\UserBihar2.cshtml" />
+    <Content Include="Views\Default\UserBihar3.cshtml" />
+    <Content Include="Views\Default\UserBihar4.cshtml" />
+    <Content Include="Views\Default\UserChhattisgarh.cshtml" />
+    <Content Include="Views\Default\UserChhattisgarh1.cshtml" />
+    <Content Include="Views\Default\UserChhattisgarh2.cshtml" />
+    <Content Include="Views\Default\UserChhattisgarh3.cshtml" />
+    <Content Include="Views\Default\UserChhattisgarh4.cshtml" />
+    <Content Include="Views\Default\UserGoa.cshtml" />
+    <Content Include="Views\Default\UserGoa1.cshtml" />
+    <Content Include="Views\Default\UserGoa2.cshtml" />
+    <Content Include="Views\Default\UserGoa3.cshtml" />
+    <Content Include="Views\Default\UserGoa4.cshtml" />
+    <Content Include="Views\Default\UserGujarat.cshtml" />
+    <Content Include="Views\Default\UserGujarat1.cshtml" />
+    <Content Include="Views\Default\UserGujarat2.cshtml" />
+    <Content Include="Views\Default\UserGujarat3.cshtml" />
+    <Content Include="Views\Default\UserGujarat4.cshtml" />
+    <Content Include="Views\Default\UserHaryana.cshtml" />
+    <Content Include="Views\Default\UserHaryana1.cshtml" />
+    <Content Include="Views\Default\UserHaryana2.cshtml" />
+    <Content Include="Views\Default\UserHaryana3.cshtml" />
+    <Content Include="Views\Default\UserHaryana4.cshtml" />
+    <Content Include="Views\Default\UserHimachalpradesh.cshtml" />
+    <Content Include="Views\Default\UserHimachalpradesh1.cshtml" />
+    <Content Include="Views\Default\UserHimachalpradesh2.cshtml" />
+    <Content Include="Views\Default\UserHimachalpradesh3.cshtml" />
+    <Content Include="Views\Default\UserHimachalpradesh4.cshtml" />
+    <Content Include="Views\Default\UserJammu.cshtml" />
+    <Content Include="Views\Default\UserJammu1.cshtml" />
+    <Content Include="Views\Default\UserJammu2.cshtml" />
+    <Content Include="Views\Default\UserJammu3.cshtml" />
+    <Content Include="Views\Default\UserJammu4.cshtml" />
+    <Content Include="Views\Default\UserJharkhand.cshtml" />
+    <Content Include="Views\Default\UserJharkhand1.cshtml" />
+    <Content Include="Views\Default\UserJharkhand2.cshtml" />
+    <Content Include="Views\Default\UserJharkhand3.cshtml" />
+    <Content Include="Views\Default\UserJharkhand4.cshtml" />
+    <Content Include="Views\Default\UserKarnataka.cshtml" />
+    <Content Include="Views\Default\UserKarnataka1.cshtml" />
+    <Content Include="Views\Default\UserKarnataka2.cshtml" />
+    <Content Include="Views\Default\UserKarnataka3.cshtml" />
+    <Content Include="Views\Default\UserKarnataka4.cshtml" />
+    <Content Include="Views\Default\UserKerala.cshtml" />
+    <Content Include="Views\Default\UserKerala1.cshtml" />
+    <Content Include="Views\Default\UserKerala2.cshtml" />
+    <Content Include="Views\Default\UserKerala3.cshtml" />
+    <Content Include="Views\Default\UserKerala4.cshtml" />
+    <Content Include="Views\Default\UserMaharashtra.cshtml" />
+    <Content Include="Views\Default\UserMaharashtra1.cshtml" />
+    <Content Include="Views\Default\UserMaharashtra2.cshtml" />
+    <Content Include="Views\Default\UserMaharashtra3.cshtml" />
+    <Content Include="Views\Default\UserMaharashtra4.cshtml" />
+    <Content Include="Views\Default\UserMadhyapradesh.cshtml" />
+    <Content Include="Views\Default\UserMadhyapradesh1.cshtml" />
+    <Content Include="Views\Default\UserMadhyapradesh2.cshtml" />
+    <Content Include="Views\Default\UserMadhyapradesh3.cshtml" />
+    <Content Include="Views\Default\UserMadhyapradesh4.cshtml" />
+    <Content Include="Views\Default\UserManipur.cshtml" />
+    <Content Include="Views\Default\UserManipur1.cshtml" />
+    <Content Include="Views\Default\UserManipur2.cshtml" />
+    <Content Include="Views\Default\UserManipur3.cshtml" />
+    <Content Include="Views\Default\UserManipur4.cshtml" />
+    <Content Include="Views\Default\UserMeghalaya.cshtml" />
+    <Content Include="Views\Default\UserMeghalaya1.cshtml" />
+    <Content Include="Views\Default\UserMeghalaya2.cshtml" />
+    <Content Include="Views\Default\UserMeghalaya3.cshtml" />
+    <Content Include="Views\Default\UserMeghalaya4.cshtml" />
+    <Content Include="Views\Default\UserMizoram.cshtml" />
+    <Content Include="Views\Default\UserMizoram1.cshtml" />
+    <Content Include="Views\Default\UserMizoram2.cshtml" />
+    <Content Include="Views\Default\UserMizoram3.cshtml" />
+    <Content Include="Views\Default\UserMizoram4.cshtml" />
+    <Content Include="Views\Default\UserNagaland.cshtml" />
+    <Content Include="Views\Default\UserNagaland1.cshtml" />
+    <Content Include="Views\Default\UserNagaland2.cshtml" />
+    <Content Include="Views\Default\UserNagaland3.cshtml" />
+    <Content Include="Views\Default\UserNagaland4.cshtml" />
+    <Content Include="Views\Default\UserOdsiha.cshtml" />
+    <Content Include="Views\Default\UserOdsiha1.cshtml" />
+    <Content Include="Views\Default\UserOdsiha2.cshtml" />
+    <Content Include="Views\Default\UserOdsiha3.cshtml" />
+    <Content Include="Views\Default\UserOdsiha4.cshtml" />
+    <Content Include="Views\Default\UserPunjab.cshtml" />
+    <Content Include="Views\Default\UserPunjab1.cshtml" />
+    <Content Include="Views\Default\UserPunjab2.cshtml" />
+    <Content Include="Views\Default\UserPunjab3.cshtml" />
+    <Content Include="Views\Default\UserPunjab4.cshtml" />
+    <Content Include="Views\Default\UserRajasthan.cshtml" />
+    <Content Include="Views\Default\UserRajasthan1.cshtml" />
+    <Content Include="Views\Default\UserRajasthan2.cshtml" />
+    <Content Include="Views\Default\UserRajasthan3.cshtml" />
+    <Content Include="Views\Default\UserRajasthan4.cshtml" />
+    <Content Include="Views\Default\UserSikkim.cshtml" />
+    <Content Include="Views\Default\UserSikkim1.cshtml" />
+    <Content Include="Views\Default\UserSikkim2.cshtml" />
+    <Content Include="Views\Default\UserSikkim3.cshtml" />
+    <Content Include="Views\Default\UserSikkim4.cshtml" />
+    <Content Include="Views\Default\UserTamilnadu.cshtml" />
+    <Content Include="Views\Default\UserTamilnadu1.cshtml" />
+    <Content Include="Views\Default\UserTamilnadu2.cshtml" />
+    <Content Include="Views\Default\UserTamilnadu3.cshtml" />
+    <Content Include="Views\Default\UserTamilnadu4.cshtml" />
+    <Content Include="Views\Default\UserTelangana.cshtml" />
+    <Content Include="Views\Default\UserTelangana1.cshtml" />
+    <Content Include="Views\Default\UserTelangana2.cshtml" />
+    <Content Include="Views\Default\UserTelangana3.cshtml" />
+    <Content Include="Views\Default\UserTelangana4.cshtml" />
+    <Content Include="Views\Default\UserTripua.cshtml" />
+    <Content Include="Views\Default\UserTripua1.cshtml" />
+    <Content Include="Views\Default\UserTripua2.cshtml" />
+    <Content Include="Views\Default\UserTripua3.cshtml" />
+    <Content Include="Views\Default\UserTripua4.cshtml" />
+    <Content Include="Views\Default\UserUttarpradesh.cshtml" />
+    <Content Include="Views\Default\UserUttarpradesh1.cshtml" />
+    <Content Include="Views\Default\UserUttarpradesh2.cshtml" />
+    <Content Include="Views\Default\UserUttarpradesh3.cshtml" />
+    <Content Include="Views\Default\UserUttarpradesh4.cshtml" />
+    <Content Include="Views\Default\UserUttarakhand.cshtml" />
+    <Content Include="Views\Default\UserUttarakhand1.cshtml" />
+    <Content Include="Views\Default\UserUttarakhand2.cshtml" />
+    <Content Include="Views\Default\UserUttarakhand3.cshtml" />
+    <Content Include="Views\Default\UserUttarakhand4.cshtml" />
+    <Content Include="Views\Default\UserWestbengal.cshtml" />
+    <Content Include="Views\Default\UserWestbengal1.cshtml" />
+    <Content Include="Views\Default\UserWestbengal2.cshtml" />
+    <Content Include="Views\Default\UserWestbengal3.cshtml" />
+    <Content Include="Views\Default\UserWestbengal4.cshtml" />
+    <Content Include="Views\Default\Heartfirstpage.cshtml" />
+    <Content Include="Views\Default\Heartexercise.cshtml" />
+    <Content Include="Views\Default\Heartdeath.cshtml" />
+    <Content Include="Views\Default\Brainfirstpage.cshtml" />
+    <Content Include="Views\Default\Braingame.cshtml" />
+    <Content Include="Views\Default\Braindeath.cshtml" />
+    <Content Include="Views\Default\kidneyfirstpage.cshtml" />
+    <Content Include="Views\Default\kidneygame.cshtml" />
+    <Content Include="Views\Default\KidneyDiseases.cshtml" />
+    <Content Include="Views\Default\Liverfirstpage.cshtml" />
+    <Content Include="Views\Default\Liverfunction.cshtml" />
+    <Content Include="Views\Default\Liverdiseases.cshtml" />
+    <Content Include="Views\Default\Lungfirstpage.cshtml" />
+    <Content Include="Views\Default\Lungfuncion.cshtml" />
+    <Content Include="Views\Default\Lungdiseases.cshtml" />
+    <Content Include="Views\Default\Generaldiesases.cshtml" />
+    <Content Include="Views\Default\Donorpage.cshtml" />
+    <Content Include="Views\Default\Statepage1.cshtml" />
+    <Content Include="Views\Default\Statepage2.cshtml" />
+    <Content Include="Views\Default\Statepage3.cshtml" />
+    <Content Include="Views\Default\Statepage4.cshtml" />
+    <Content Include="Views\Default\Donorfrom.cshtml" />
+    <Content Include="Views\Default\Admindonor1.cshtml" />
+    <Content Include="Views\Default\Adminguidelines1.cshtml" />
+    <Content Include="Views\Default\Aboutus.cshtml" />
+    <Content Include="Views\Default\Contanctus.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49944</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49944/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
