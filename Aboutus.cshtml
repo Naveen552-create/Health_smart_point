@@ -1,0 +1,118 @@
+﻿@model WebApplication2.Models.Modelclass
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ABOUTUS</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <style>
+
+  
+body{
+background: url('https://img.freepik.com/premium-photo/medicine-doctor-team-meeting-analysis_34200-351.jpg?w=1060');
+background-repeat: no-repeat;
+background-size: cover;
+font-family: 'Poppins', sans-serif;
+}
+.p1{
+
+width: 1000px;
+border-radius: 10px;
+color: white;
+padding: 10px;
+background: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.5)50%);
+font-size: 20px;
+margin-left: 250px;
+}
+.p2{
+width: 1000px;
+border-radius: 10px;
+color: white;
+padding: 20px;
+background: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.5)50%);
+font-size: 20px;
+margin-left: 250px;
+}
+.p3{
+width: 1000px;
+border-radius: 10px;
+color: white;
+padding: 10px;
+background: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.5)50%);
+font-size: 20px;
+margin-left: 250px;
+}
+h2{
+      letter-spacing: 2px;
+      color: #f2aa4cff;
+}
+h3{
+      color: #f2aa4cff;
+}
+h1{
+text-align: center;
+font-size: 70px;
+color: #f2aa4cff;
+}
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <h1>ABOUT US</h1>
+        <div class="p1">
+            <center><h2>VISION</h2></center>
+            <hr>
+            <p>
+                <center> To be nationally respected for excellence in patient care and most trusted for personalized coordinated care.</center>
+            </p>
+        </div>
+        <br>
+        <div class="p2">
+            <center><h2>MISSION</h2></center>
+            <hr>
+            <p>
+                <center> To improve the health and healing of the people and communities we serve.</center>
+            </p>
+        </div>
+        <br>
+        <div class="p3">
+            <center><h2>VALUES</h2></center>
+            <hr>
+            <ul>
+                <li>
+                    <h3>Caring: We Do the Kind Thing</h3>
+                    <p>Every staff member touches the lives of the patients and families in our care. We treat those we serve and each other with kindness and compassion and strive to better understand and respond to the needs of a diverse community.</p>
+                </li>
+                <li>
+                    <h3>Safety: We Do the Safe Thing</h3>
+                    <p>Patients and families have placed their lives and health in our hands. Our first priority – and the rule of medicine – is to protect them from harm. We believe that maintaining the highest safety standards is critical to delivering high-quality care and that a safe workplace protects us all.</p>
+                </li>
+                <li>
+                    <h3>Excellence: We do the Best Thing</h3>
+                    <p>With us, only the best will do. We work as a team to bring experience, advanced technology and best practices to bear in providing the highest-quality care for our patients and families. We devote ourselves to continuous improvement, excellence, professionalism and innovation in our work.</p>
+                </li>
+                <li>
+                    <h3>Integrity: We Do the Right Thing</h3>
+                    <p>Our actions tell the world what  we stand for. We act ethically and responsibly in everything we do and hold ourselves accountable for our behavior. We bring respect, openness and honesty to our encounters with patients, families and coworkers and support the well-being of the communities we serve.</p>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+
+    }
+</body>
+</html>
+

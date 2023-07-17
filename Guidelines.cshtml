@@ -1,0 +1,93 @@
+﻿@model WebApplication2.Models.Modelclass
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Guideliness</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    
+    <style>
+        body {
+            background-image: url('../../content/image/abstract-blur-hospital-clinic-interior.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        @using (Html.BeginForm())
+        {
+
+            <div class="container" style="background-color: #00000070; padding: 25px; border-radius: 10px; margin-top: 18px;">
+                @ViewBag.msg
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", id = "name", @PlaceHolder = "Enter Your Name", @Style = "margin-bottom:2%;" })
+                @Html.TextBoxFor(m => m.Disease, new { @class = "form-control", id = "disease", @PlaceHolder = "Enter Your Disease", @Style = "margin-bottom:2%;" })
+                @Html.TextBoxFor(m => m.Location, new { @class = "form-control", id = "location", @PlaceHolder = "Enter Your Location", @Style = "margin-bottom:2%;" })
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", id = "phone", @PlaceHolder = "Enter Your Phone", @Style = "margin-bottom:2%;" })
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", id = "email", @PlaceHolder = "Enter Your Email", @Style = "margin-bottom:2%;" })
+                @Html.TextAreaFor(m => m.Address, new { @class = "form-control", id = "address", @PlaceHolder = "Enter Your Address", @Style = "margin-bottom:2%;" })
+
+                <button type="submit" class="btn btn-primary" id="btnSubmit" onclick="return submit1()">Submit</button>
+
+            </div>
+        }
+    </div>
+
+</body>
+</html>
+<script>
+   
+    function submit1() {
+        var name = document.getElementById("name").value;
+        var disease = document.getElementById("disease").value;
+        var location = document.getElementById("location").value;
+        var phone = document.getElementById("phone").value;      
+        var address = document.getElementById("address").value;
+    
+        if (name == "") {
+            alert("Enter your name");
+            document.getElementById("name").focus();
+            return false;
+        }
+        else if (disease == "" ) {
+            alert("Enter your diseases type");
+            document.getElementById("disease").focus();
+            return false;
+        }
+        else if (location == "") {
+            alert("Enter your location type");
+            document.getElementById("location").focus();
+            return false;
+        }
+        else if (phone == "" || phone.length!=10) {
+            alert("Enter your phone number correctly");
+            document.getElementById("phone").focus();
+            return false;
+        }
+       
+        else if (address == "") {
+            alert("Enter your address");
+            document.getElementById("address").focus();
+            return false;
+          
+        }
+        
+        else {
+            alert("ThankYou For Your Submited Form");
+        }
+
+    }
+</script>
+
+
+
+

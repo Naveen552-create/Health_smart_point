@@ -1,0 +1,59 @@
+﻿@model WebApplication2.Models.Modelclass
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>login</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/88/15/63/881563d6444b370fa4ceea0c3183bb4c.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <center>
+
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="container" style="padding: 175px;">
+                
+                    @ViewBag.msg
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h5>ADMIN LOGIN</h5>
+                        </div>
+                        <div class="card-body">
+                            <center>
+                                <form method="get" action="Dept">
+
+                                    <div class="form-group col-lg-6">
+                                        @Html.LabelFor(m => m.Username)
+                                        @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @PlaceHolder = "Enter Your UserName", @Style = "margin-bottom:2%;", })
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        @Html.LabelFor(m => m.Password)
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @PlaceHolder = "Enter Your Password", @Style = "margin-bottom:2%;" })
+                                    </div>
+                                </form>
+                            </center><br />
+                            <button type="submit" class="btn btn-primary" id="btnSumbit">Submit</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </center>
+    }
+
+</body>
+</html>

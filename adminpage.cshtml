@@ -1,0 +1,60 @@
+﻿@model WebApplication2.Models.Modelclass
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+    <div>
+      <center>  <img src="~/Content/Image/logo.jpg" /> </center>
+    </div>
+    <div class="container" style="padding: 50px;">
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="~/Content/Image/hospital admin.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> LOCATION OF HOSTIPAL'S</h5>
+                        <p class="card-text"> This choice means that the hospital does not belong to an empty, uninhabited office area, but in a living and habitable city centre.</p>
+                        <p class="card-text"><a href="@Url.Action("Admincard", "Default")" class="btn btn-success">CLICK HERE</a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="~/Content/Image/GUIDELINES.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">GUIDELINES</h5>
+                        <p class="card-text">Guidelines guide employees through a process or a task. They give general recommendations of how to perform a task, or advice on how to proceed in a situation.</p>
+                        <p class="card-text"><a href="@Url.Action("Adminguidelines1", "Default")" class="btn btn-success">CLICK HERE</a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="~/Content/Image/organ donor.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">BLOOD DONATRE FORM</h5>
+                        <p class="card-text">Whole blood donation is the most common type of blood donation. During this donation, you donate about a pint (about half a liter) of whole blood.</p>
+                        <p class="card-text"><a href="@Url.Action("Admindonor1", "Default")" class="btn btn-success">CLICK HERE</a> </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+

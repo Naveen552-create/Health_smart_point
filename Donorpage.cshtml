@@ -1,0 +1,75 @@
+﻿@model WebApplication2.Models.Modelclass
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>kidney</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <center>  <img src="~/Content/Image/logo.jpg" /> </center>
+        </div>
+
+        <div class="container" style="padding: 50px;">
+            <div class="row row-cols-1 row-cols-md-3">
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="https://articulate-heroes.s3.amazonaws.com/uploads/rte/efavxudk_Donating%20Blood_Jen%20Edgerton_GIF.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text"><h5>BLOOD DONOR </h5> </p>
+                            <p class="card-text">Blood donation is a voluntary procedure that can help save lives. There are several types of blood donation. </p>
+                            <p class="card-text">
+                                <b> <i>Can one blood donation save up to 3 lives?</i></b>
+                                One pint of blood can save up to three lives. Healthy adults who are at least 17 years old, and at least 110 pounds may donate about a pint of blood - the most common form of donation - every 56 days, or every two months.
+                            </p>
+                            <p class="card-text"><a href="@Url.Action("Donorfrom", "Default")" class="btn btn-success">BLOOD DONOR FORM</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="https://w.ndtvimg.com/sites/26/2016/11/27162858/GIF-8-Total-Transplants-Needed-In-India.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text"><h5>ORGAN DONOR</h5> </p>
+                            <p class="card-text"><b><i>"The donor is in a proper state of health and is fit to donate the organ."</i></b> </p>
+                            <p class="card-text">
+
+
+                                <b><i> Organ donation and eligibility?</i></b>
+                                Anyone can register a decision to become an organ donor after death, there is no age limit. ...
+                                Specialist healthcare professionals decide in each individual case whether a person's organs and tissue are suitable for donation.
+                            </p>
+                            <p class="card-text"><a href="@Url.Action("Donorfrom", "Default")" class="btn btn-success">ORGAN DONOR FORM</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="https://media3.giphy.com/media/l4KifuM5FMAYEXc6Q/giphy.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text"><h5>KIDNEY DONOR  </h5></p>
+                            <p class="card-text">
+                                Organ transplantation is a medical procedure in which an organ is removed from one body and placed in the body of a recipient, to replace a damaged or missing organ.
+                                <b><i> Can I donate my 1 kidney?</i></b>
+                                Both your kidneys can be donated after your death and potentially used for two kidney transplants. But, because you can live a healthy life with just one kidney, it is possible to donate one kidney as a living donor. There are huge numbers of people needing a kidney transplant.
+                            </p>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
